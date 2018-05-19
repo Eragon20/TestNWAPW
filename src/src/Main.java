@@ -21,7 +21,7 @@ public class Main {
 		
 		boolean bool = true;
 		while (bool) {
-			System.out.println("Type 'c' to create a new question\nType 'r' to read all questions");
+			System.out.println("Type 'c' to create a new question\nType 'r' to read all questions\nType 'q' to quit.");
 			Scanner sc1 = new Scanner(System.in);
 			String act = sc1.nextLine();
 		
@@ -33,6 +33,10 @@ public class Main {
 			else if (act.equalsIgnoreCase("r")) {
 				read(questionsMain);
 				System.out.println("Thanks! Another?");
+			}
+			else if (act.equalsIgnoreCase("q")) {
+				bool = !bool;
+				System.out.println("¡Gracias! Ven de nuevo!");
 			}
 			else {
 				System.out.println("you're a failure. Please follow directions.");
