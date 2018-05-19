@@ -6,7 +6,7 @@ public class Main {
 	ArrayList<String> questionsMain = new ArrayList<String>();
 
 	public Main() {
-		Scanner s = new Scanner("Test");
+		Scanner s = new Scanner(System.in);
 		System.out.println(s.next());
 		System.out.println("This is a (very difficult) test.");
 		
@@ -46,4 +46,3 @@ public class Main {
 		questionsMain.add(question);
 	}
 }
-
