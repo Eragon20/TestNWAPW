@@ -9,6 +9,24 @@ public class Main {
 		Scanner s = new Scanner("Test");
 		System.out.println(s.next());
 		System.out.println("This is a (very difficult) test.");
+		
+		boolean bool;
+		while (bool) {
+			System.out.println("Type 'c' to create a new question\nType 'r' to read all questions");
+			String act = s.nextLine();
+			
+			if (act.equalsIgnoreCase("c")) {
+				create();
+			}
+			else if (act.equalsIgnoreCase("r")) {
+				read();
+			}
+			else {
+				System.out.println("you're a failure. Please follow directions.");
+				bool = false;
+			}
+		}
+		
 	}
 	
 	public static void main(String[] args) {
