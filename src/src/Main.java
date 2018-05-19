@@ -8,34 +8,36 @@ public class Main {
 	ArrayList<String> questionsMain = new ArrayList<String>();
 
 	public Main() {
+		
 		Scanner s = new Scanner(System.in);
 
 		try {
-			s = new Scanner(new File("C:/Users/Varas/IdeaProjects/TestNWAPW/src/Test.txt"));
+			s = new Scanner(new File("src/Test.txt"));
 		} catch (IOException e) {
 			System.out.println(e);
 		}
 		
-		System.out.println(s.next());
 		System.out.println("This is a (very difficult) test.");
 		
 		boolean bool = true;
 		while (bool) {
 			System.out.println("Type 'c' to create a new question\nType 'r' to read all questions");
-			String act = s.nextLine();
-			
+			Scanner sc1 = new Scanner(System.in);
+			String act = sc1.nextLine();
+		
 			if (act.equalsIgnoreCase("c")) {
 				create();
+				System.out.println("Thanks! Another?");
 			}
+			
 			else if (act.equalsIgnoreCase("r")) {
 				read(questionsMain);
+				System.out.println("Thanks! Another?");
 			}
 			else {
 				System.out.println("you're a failure. Please follow directions.");
-				bool = false;
 			}
 		}
-		
 	}
 	
 	public static void main(String[] args) {
