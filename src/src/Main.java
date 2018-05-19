@@ -23,6 +23,7 @@ public class Main {
 	
 	public void create() {
 		Scanner sc = new Scanner();
+		System.out.println("Please submit your question...");
 		String question = sc.nextLine();
 		questionsMain.add(question);
 	}
